@@ -1,0 +1,26 @@
+<atlassian-plugin key="${addon.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    </plugin-info>
+
+    <web-item key="hello-tab" section="bitbucket.pull-request.nav">
+        <label>Hello</label>
+        <link>${helloUrl}</link>
+        <context-provider class="it.orlov.bitbucket.hello.HelloUrlContextProvider"/>
+    </web-item>
+
+    <web-resource key="hello-resources">
+        <resource type="download" name="hello.js" location="/js/hello.js"/>
+        <context>bitbucket.page.pullRequest.view</context>
+    </web-resource>
+
+    <client-resource key="hello-templates">
+        <directory location="/soy/"/>
+    </client-resource>
+
+    <servlet key="hello-servlet" class="it.orlov.bitbucket.hello.HelloServlet">
+        <url-pattern>/hello/*</url-pattern>
+    </servlet>
+</atlassian-plugin>

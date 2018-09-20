@@ -1,0 +1,20 @@
+{namespace hello}
+
+/**
+ * @param pullRequest
+ */
+{template .page}
+    {let $repository: $pullRequest.toRef.repository /}
+    <html>
+    <head>
+        <meta name="decorator" content="bitbucket.pullrequest.view">
+        <meta name="projectKey" content="{$repository.project.key}">
+        <meta name="repositorySlug" content="{$repository.slug}">
+        <meta name="pullRequestId" content="{$pullRequest.id}">
+        <meta name="activeTab" content="hello-tab">
+        <title>Pull Request #{$pullRequest.id}: {$pullRequest.title}</title>
+    </head>
+    <body>
+    </body>
+    </html>
+{/template}
