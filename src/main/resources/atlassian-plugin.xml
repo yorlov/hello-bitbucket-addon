@@ -12,6 +12,8 @@
     </web-item>
 
     <web-resource key="hello-resources">
+        <resource type="download" name="aui.js" location="/js/aui.js"/>
+        <resource type="download" name="pull-request-layout.js" location="/js/pull-request-layout.js"/>
         <resource type="download" name="hello.js" location="/js/hello.js"/>
         <context>bitbucket.page.pullRequest.view</context>
     </web-resource>

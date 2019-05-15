@@ -1,4 +1,4 @@
-define('orlov/hello', ['aui', 'bitbucket/internal/layout/pull-request'], function (AJS, handlers) {
+define('orlov/hello', ['orlov/aui', 'bitbucket-plugin-layout-pull-request'], function (AJS, handlers) {
 
     'use strict';
 
